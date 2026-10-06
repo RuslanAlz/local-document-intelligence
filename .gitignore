@@ -1,0 +1,25 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and intermediate outputs
+.cache/
+data/
+ollama_models/
+result_report.md
+*.pdf
+
+# Environment variables
+.env
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Editor and OS artifacts
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
