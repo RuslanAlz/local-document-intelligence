@@ -1,0 +1,13 @@
+ollama
+pypdf
+pdfplumber
+python-docx
+tqdm
+fastapi
+uvicorn
+transformers
+langchain-text-splitters
+pymupdf4llm
+pydantic
+requests
+python-multipart

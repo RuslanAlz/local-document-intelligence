@@ -1,0 +1,10 @@
+.cache/
+data/
+__pycache__/
+*.pdf
+*.tar
+.env
+ollama_models/
+docker-compose.yml
+result_report.md
+.git/

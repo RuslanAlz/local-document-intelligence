@@ -1,0 +1,24 @@
+services:
+  summarize-app:
+    build: .
+    container_name: summarize_container
+    environment:
+      - OLLAMA_FLASH_ATTENTION=1
+      - OLLAMA_KV_CACHE_TYPE=q8_0
+      - TRANSFORMERS_OFFLINE=1
+      - OLLAMA_NUM_PARALLEL=${OLLAMA_PARALLEL:-1024}
+      - VRAM_GB=12
+    ports:
+      - "2222:22"
+      - "11434:11434"
+    volumes:
+      - .:/app
+      - ${OLLAMA_MOUNT_PATH:-./ollama_models}:/root/.ollama/models
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
