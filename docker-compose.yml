@@ -9,8 +9,7 @@ services:
       - OLLAMA_NUM_PARALLEL=${OLLAMA_PARALLEL:-1024}
       - VRAM_GB=12
     ports:
-      - "2222:22"
-      - "11434:11434"
+      - "127.0.0.1:11434:11434"
     volumes:
       - .:/app
       - ${OLLAMA_MOUNT_PATH:-./ollama_models}:/root/.ollama/models

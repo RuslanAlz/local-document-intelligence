@@ -64,9 +64,8 @@ docker compose up --build
 ```
 
 The container starts:
-- Ollama service on port `11434`
+- Ollama service on port `11434` (bound to `127.0.0.1` on the host)
 - FastAPI server on port `8000` (or background runner)
-- SSH management interface on port `2222`
 
 ### 3. Running Locally (Direct Python)
 
